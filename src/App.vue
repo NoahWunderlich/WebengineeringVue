@@ -1,12 +1,21 @@
 <template>
-  <nav>
-    <router-link to="/">Home</router-link> |
-    <router-link to="/about">About</router-link>
+  <div>
+  <nav style="background-color:gray;font-size:32px;font-family:arial;">
+    <router-link to="/">Home</router-link> |    <router-link to="/timetableview">TimeTable</router-link> | 
+    <router-link to="/twitterview">Twitter</router-link> | 
+    <router-link to="/adminview">Admin</router-link>
   </nav>
-  <router-view/>
+  <div class="grey lighten-4 backImg">
+      <router-view />
+  </div>
+  </div>
 </template>
 
 <style lang="scss">
+  *{
+    margin:0px;
+
+  }
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
@@ -23,7 +32,7 @@ nav {
     color: #2c3e50;
 
     &.router-link-exact-active {
-      color: #42b983;
+      color: blue;
     }
   }
 }
