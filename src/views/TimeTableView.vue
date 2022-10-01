@@ -1,7 +1,6 @@
 
 <template>
       <div>
-        <h1>TEST</h1>
         <TimeTable/>
       </div>
 </template>

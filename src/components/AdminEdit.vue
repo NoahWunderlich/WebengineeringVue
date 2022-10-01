@@ -4,6 +4,8 @@
             <h2>Add new blog post</h2>
             heading: <input v-model="heading">
             text: <input v-model="text">
+            <button @click="newBlogPost">Add</button>
+
         </div>
         <br>
         <div>
@@ -32,14 +34,35 @@ export default {
     name:"adminEdit",
     data(){
         return{
-            date:Date.now()
+            date:Date.now(),
+            heading:"",
+            text:"",
+            name:"",
+            description:"",
+            subject:"",
+            start:"",
+            end:""
         }
     },
     mounted(){
 
     },
     methods:{
-
-    }
+        newBlogPost(){
+            const requestOptions = {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify({ blogpost:{
+                    heading: this.heading,
+                    text:this.text,
+                    postedAt:this.date
+                }
+}           )
+            };
+                fetch("http://127.0.0.1:8000/api/blogpost/store", requestOptions)
+            .then(response => response.json())
+            .then(data => (this.postId = data.id));
 }
+        }
+    }
 </script>

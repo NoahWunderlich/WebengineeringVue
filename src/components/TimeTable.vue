@@ -1,6 +1,30 @@
 <template>
-    <div>
-      <h1>This is an timetable page</h1>
+    <div >
+      <div >
+        <div v-for="(item, index) in data" :key = index>
+      </div>
+      <div class="weekdays">
+        <h2>Monday</h2>
+
+      </div>
+      <div class="weekdays"> 
+        <h2>Tuesday</h2>
+
+    </div>
+    <div class="weekdays"> 
+        <h2>Wednesday</h2>
+
+    </div>
+    <div class="weekdays"> 
+        <h2>Thursday</h2>
+
+    </div>
+    <div class="weekdays"> 
+        <h2>Friday</h2>
+
+    </div>
+
+      </div>
   
     </div>
   </template>
@@ -27,4 +51,12 @@
       }
   }
   </script>
-  
+  <style>
+.weekdays{
+    margin:8px;
+    background-color: lightgray;
+    float:left;
+    width:15%;
+    height:400px;
+}
+  </style>
