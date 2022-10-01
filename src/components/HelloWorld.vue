@@ -25,7 +25,7 @@
       <br>
       <h5>Beginning at: {{item.start.slice(0, -3).replace('T',' ')}}</h5>
       <br>
-      <a>description: {{item.description}}</a>
+      <a>{{item.description}}</a>
       <br>
     <br>
       </div>
